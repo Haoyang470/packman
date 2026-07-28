@@ -1,0 +1,29 @@
+\doxysection{List\+Board\+Objects\+H.\+h}
+\hypertarget{ListBoardObjectsH_8h_source}{}\label{ListBoardObjectsH_8h_source}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ \ "{}BoardObjectH.h"{}}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ \ "{}PlayerH.h"{}}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ \ "{}CookieH.h"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#ifndef\ H\_LIST\_OF\_OBJECTS}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#define\ H\_LIST\_OF\_OBJECTS}}
+\DoxyCodeLine{00007\ \textcolor{keyword}{typedef}\ \mbox{\hyperlink{classBoardObject}{BoardObject}}*\ \mbox{\hyperlink{classBoardObject}{p\_BoardObject}};}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{keyword}{class\ \ }\mbox{\hyperlink{classListBoardObjects}{ListBoardObjects}}}
+\DoxyCodeLine{00011\ \{}
+\DoxyCodeLine{00012\ \ \ \ \ std::vector\ <p\_BoardObject>\ list;}
+\DoxyCodeLine{00013\ \ \ \ \ std::vector\ <\ p\_BoardObject>::iterator\ internalIterator;}
+\DoxyCodeLine{00014\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00015\ \ \ \ \ \mbox{\hyperlink{classListBoardObjects}{ListBoardObjects}}(\mbox{\hyperlink{classBoardObject}{p\_BoardObject}}\ theFirst);}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \ \ \ \ \mbox{\hyperlink{classBoardObject}{p\_BoardObject}}\ theFirst();}
+\DoxyCodeLine{00018\ \ \ \ \ \mbox{\hyperlink{classBoardObject}{p\_BoardObject}}\ theNext();}
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keywordtype}{void}\ addOne(\mbox{\hyperlink{classBoardObject}{p\_BoardObject}}\ newOne);}
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keywordtype}{void}\ removeOnePlayer();}
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keywordtype}{bool}\ isThereAWall();}
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keywordtype}{int}\ isCookieValue();}
+\DoxyCodeLine{00023\ \};}
+\DoxyCodeLine{00024\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

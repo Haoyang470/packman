@@ -1,0 +1,41 @@
+\doxysection{Vector\+Board\+Objects.\+h}
+\hypertarget{VectorBoardObjects_8h_source}{}\label{VectorBoardObjects_8h_source}\mbox{\hyperlink{VectorBoardObjects_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#ifndef\ VECTORBOARDOBJECTSH\_H}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#define\ VECTORBOARDOBJECTSH\_H}}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ "{}BoardObjectH.h"{}}}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \textcolor{keyword}{typedef}\ \mbox{\hyperlink{classBoardObject}{BoardObject}}*\ \mbox{\hyperlink{classBoardObject}{p\_BoardObject}};}
+\DoxyCodeLine{00015\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ MAX\_OBJECTS\ =\ 4;}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00021\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classVectorBoardObjects}{VectorBoardObjects}}\ \{}
+\DoxyCodeLine{00022\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00023\ \ \ \ \ \mbox{\hyperlink{classBoardObject}{p\_BoardObject}}\ collection[MAX\_OBJECTS];\ }
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keywordtype}{int}\ count;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keywordtype}{int}\ internalCursor;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00034\ \ \ \ \ \mbox{\hyperlink{classVectorBoardObjects_ae818b80eca5cb47e87ca8681ad420783}{VectorBoardObjects}}(\mbox{\hyperlink{classBoardObject}{p\_BoardObject}}\ newOne);}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00041\ \ \ \ \ \mbox{\hyperlink{classVectorBoardObjects_ae818b80eca5cb47e87ca8681ad420783}{VectorBoardObjects}}();}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00048\ \ \ \ \ \mbox{\hyperlink{classVectorBoardObjects_a6706fc3077d6a0184db26da430927393}{\string~VectorBoardObjects}}();}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00056\ \ \ \ \ \mbox{\hyperlink{classBoardObject}{p\_BoardObject}}\ \mbox{\hyperlink{classVectorBoardObjects_a0764ad1785c4f7256d867dd08bbb2bfd}{theFirst}}();}
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00064\ \ \ \ \ \mbox{\hyperlink{classBoardObject}{p\_BoardObject}}\ \mbox{\hyperlink{classVectorBoardObjects_a35a5be66b34871014d5a5b5324c4b4d9}{theNext}}();}
+\DoxyCodeLine{00065\ }
+\DoxyCodeLine{00072\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classVectorBoardObjects_a3ccfcfeae8301dc08fd4db310e8b31ff}{addOne}}(\mbox{\hyperlink{classBoardObject}{p\_BoardObject}}\ newOne);}
+\DoxyCodeLine{00073\ }
+\DoxyCodeLine{00079\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classVectorBoardObjects_a2c357e9cc68511363f2d67c1ddf9fa57}{removeOnePlayer}}();}
+\DoxyCodeLine{00080\ }
+\DoxyCodeLine{00087\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classVectorBoardObjects_a7fcf7bac6e8743ba685b55460c46ac6a}{isThereAWall}}();}
+\DoxyCodeLine{00088\ }
+\DoxyCodeLine{00095\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classVectorBoardObjects_a8c1c852ead148779e03db687c457da85}{isCookieValue}}();}
+\DoxyCodeLine{00096\ \};}
+\DoxyCodeLine{00097\ }
+\DoxyCodeLine{00098\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ VECTORBOARDOBJECTSH\_H}}
+
+\end{DoxyCode}

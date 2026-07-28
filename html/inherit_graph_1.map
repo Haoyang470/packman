@@ -1,0 +1,13 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="Node000000" href="$classBoardObject.html" title=" " alt="" coords="5,104,108,129"/>
+<area shape="rect" id="Node000001" href="$classBomb.html" title="Derived class from BoardObject representing an explosive item." alt="" coords="163,5,223,31"/>
+<area shape="poly" id="edge1_Node000000_Node000001" title=" " alt="" coords="83,94,154,40,171,29,174,33,158,44,86,98"/>
+<area shape="rect" id="Node000002" href="$classCookie.html" title=" " alt="" coords="160,55,227,80"/>
+<area shape="poly" id="edge2_Node000000_Node000002" title=" " alt="" coords="104,97,159,77,161,82,106,102"/>
+<area shape="rect" id="Node000003" href="$classMonster.html" title="Derived class from BoardObject representing an active hazard/enemy." alt="" coords="156,104,231,129"/>
+<area shape="poly" id="edge3_Node000000_Node000003" title=" " alt="" coords="122,114,156,114,156,119,122,119"/>
+<area shape="rect" id="Node000004" href="$classPlayer.html" title=" " alt="" coords="162,153,225,179"/>
+<area shape="poly" id="edge4_Node000000_Node000004" title=" " alt="" coords="106,131,163,152,161,157,104,137"/>
+<area shape="rect" id="Node000005" href="$classWall.html" title=" " alt="" coords="168,203,219,228"/>
+<area shape="poly" id="edge5_Node000000_Node000005" title=" " alt="" coords="88,136,158,188,175,200,172,205,154,192,84,140"/>
+</map>

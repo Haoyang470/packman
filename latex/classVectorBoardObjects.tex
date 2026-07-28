@@ -1,0 +1,213 @@
+\doxysection{Vector\+Board\+Objects Class Reference}
+\hypertarget{classVectorBoardObjects}{}\label{classVectorBoardObjects}\index{VectorBoardObjects@{VectorBoardObjects}}
+
+
+Manages up to MAX\+\_\+\+OBJECTS \doxylink{classBoardObject}{Board\+Object} pointers.  
+
+
+
+
+{\ttfamily \#include $<$Vector\+Board\+Objects.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classVectorBoardObjects_ab8323db981daa247622bbc7bfbbb8b84}{Vector\+Board\+Objects}} (\mbox{\hyperlink{classBoardObject}{p\+\_\+\+Board\+Object}} new\+One)
+\begin{DoxyCompactList}\small\item\em Constructs a \doxylink{classVectorBoardObjects}{Vector\+Board\+Objects} container pre-\/populated with a initial object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classVectorBoardObjects_ae818b80eca5cb47e87ca8681ad420783}{Vector\+Board\+Objects}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor for an empty container. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classVectorBoardObjects_a6706fc3077d6a0184db26da430927393}{\texorpdfstring{$\sim$}{\string~}\+Vector\+Board\+Objects}} ()
+\begin{DoxyCompactList}\small\item\em Destructor. Cleans up dynamically allocated memory if owned. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classBoardObject}{p\+\_\+\+Board\+Object}} \mbox{\hyperlink{classVectorBoardObjects_a0764ad1785c4f7256d867dd08bbb2bfd}{the\+First}} ()
+\begin{DoxyCompactList}\small\item\em Retrieves the first object in the collection and resets the internal cursor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classBoardObject}{p\+\_\+\+Board\+Object}} \mbox{\hyperlink{classVectorBoardObjects_a35a5be66b34871014d5a5b5324c4b4d9}{the\+Next}} ()
+\begin{DoxyCompactList}\small\item\em Retrieves the next object in the collection based on the internal cursor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classVectorBoardObjects_a3ccfcfeae8301dc08fd4db310e8b31ff}{add\+One}} (\mbox{\hyperlink{classBoardObject}{p\+\_\+\+Board\+Object}} new\+One)
+\begin{DoxyCompactList}\small\item\em Adds a new \doxylink{classBoardObject}{Board\+Object} to the top/front of the collection. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classVectorBoardObjects_a2c357e9cc68511363f2d67c1ddf9fa57}{remove\+One\+Player}} ()
+\begin{DoxyCompactList}\small\item\em Removes the \doxylink{classPlayer}{Player} object from the container if present. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classVectorBoardObjects_a7fcf7bac6e8743ba685b55460c46ac6a}{is\+There\+AWall}} ()
+\begin{DoxyCompactList}\small\item\em Checks if any object in the collection is a wall. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classVectorBoardObjects_a8c1c852ead148779e03db687c457da85}{is\+Cookie\+Value}} ()
+\begin{DoxyCompactList}\small\item\em Checks for a \doxylink{classCookie}{Cookie} object and returns its point value. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Manages up to MAX\+\_\+\+OBJECTS \doxylink{classBoardObject}{Board\+Object} pointers. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classVectorBoardObjects_ab8323db981daa247622bbc7bfbbb8b84}\label{classVectorBoardObjects_ab8323db981daa247622bbc7bfbbb8b84} 
+\index{VectorBoardObjects@{VectorBoardObjects}!VectorBoardObjects@{VectorBoardObjects}}
+\index{VectorBoardObjects@{VectorBoardObjects}!VectorBoardObjects@{VectorBoardObjects}}
+\doxysubsubsection{\texorpdfstring{VectorBoardObjects()}{VectorBoardObjects()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Vector\+Board\+Objects\+::\+Vector\+Board\+Objects (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classBoardObject}{p\+\_\+\+Board\+Object}}}]{new\+One }\end{DoxyParamCaption})}
+
+
+
+Constructs a \doxylink{classVectorBoardObjects}{Vector\+Board\+Objects} container pre-\/populated with a initial object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\+One} & Pointer to the initial \doxylink{classBoardObject}{Board\+Object} to add. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Precondition}
+new\+One != nullptr (The provided object pointer must be valid). 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+count == 1, collection\mbox{[}0\mbox{]} == new\+One, and internal\+Cursor is set to 0. 
+\end{DoxyPostcond}
+\Hypertarget{classVectorBoardObjects_ae818b80eca5cb47e87ca8681ad420783}\label{classVectorBoardObjects_ae818b80eca5cb47e87ca8681ad420783} 
+\index{VectorBoardObjects@{VectorBoardObjects}!VectorBoardObjects@{VectorBoardObjects}}
+\index{VectorBoardObjects@{VectorBoardObjects}!VectorBoardObjects@{VectorBoardObjects}}
+\doxysubsubsection{\texorpdfstring{VectorBoardObjects()}{VectorBoardObjects()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Vector\+Board\+Objects\+::\+Vector\+Board\+Objects (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Default constructor for an empty container. 
+
+\begin{DoxyPrecond}{Precondition}
+None. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+count == 0 and internal\+Cursor is set to 0. 
+\end{DoxyPostcond}
+\Hypertarget{classVectorBoardObjects_a6706fc3077d6a0184db26da430927393}\label{classVectorBoardObjects_a6706fc3077d6a0184db26da430927393} 
+\index{VectorBoardObjects@{VectorBoardObjects}!````~VectorBoardObjects@{\texorpdfstring{$\sim$}{\string~}VectorBoardObjects}}
+\index{````~VectorBoardObjects@{\texorpdfstring{$\sim$}{\string~}VectorBoardObjects}!VectorBoardObjects@{VectorBoardObjects}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}VectorBoardObjects()}{\string~VectorBoardObjects()}}
+{\footnotesize\ttfamily Vector\+Board\+Objects\+::\texorpdfstring{$\sim$}{\string~}\+Vector\+Board\+Objects (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destructor. Cleans up dynamically allocated memory if owned. 
+
+\begin{DoxyPrecond}{Precondition}
+None. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+All object slots cleared and container memory released. 
+\end{DoxyPostcond}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classVectorBoardObjects_a3ccfcfeae8301dc08fd4db310e8b31ff}\label{classVectorBoardObjects_a3ccfcfeae8301dc08fd4db310e8b31ff} 
+\index{VectorBoardObjects@{VectorBoardObjects}!addOne@{addOne}}
+\index{addOne@{addOne}!VectorBoardObjects@{VectorBoardObjects}}
+\doxysubsubsection{\texorpdfstring{addOne()}{addOne()}}
+{\footnotesize\ttfamily void Vector\+Board\+Objects\+::add\+One (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classBoardObject}{p\+\_\+\+Board\+Object}}}]{new\+One }\end{DoxyParamCaption})}
+
+
+
+Adds a new \doxylink{classBoardObject}{Board\+Object} to the top/front of the collection. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\+One} & Pointer to the \doxylink{classBoardObject}{Board\+Object} to add. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Precondition}
+count \texorpdfstring{$<$}{<} MAX\+\_\+\+OBJECTS and new\+One != nullptr. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Objects are shifted right; new\+One is placed at collection\mbox{[}0\mbox{]}, and count is incremented by 1. 
+\end{DoxyPostcond}
+\Hypertarget{classVectorBoardObjects_a8c1c852ead148779e03db687c457da85}\label{classVectorBoardObjects_a8c1c852ead148779e03db687c457da85} 
+\index{VectorBoardObjects@{VectorBoardObjects}!isCookieValue@{isCookieValue}}
+\index{isCookieValue@{isCookieValue}!VectorBoardObjects@{VectorBoardObjects}}
+\doxysubsubsection{\texorpdfstring{isCookieValue()}{isCookieValue()}}
+{\footnotesize\ttfamily int Vector\+Board\+Objects\+::is\+Cookie\+Value (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Checks for a \doxylink{classCookie}{Cookie} object and returns its point value. 
+
+\begin{DoxyPrecond}{Precondition}
+None. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+The state of the collection remains unchanged. 
+\end{DoxyPostcond}
+\begin{DoxyReturn}{Returns}
+Integer value of the \doxylink{classCookie}{Cookie} if present; 0 otherwise. 
+\end{DoxyReturn}
+\Hypertarget{classVectorBoardObjects_a7fcf7bac6e8743ba685b55460c46ac6a}\label{classVectorBoardObjects_a7fcf7bac6e8743ba685b55460c46ac6a} 
+\index{VectorBoardObjects@{VectorBoardObjects}!isThereAWall@{isThereAWall}}
+\index{isThereAWall@{isThereAWall}!VectorBoardObjects@{VectorBoardObjects}}
+\doxysubsubsection{\texorpdfstring{isThereAWall()}{isThereAWall()}}
+{\footnotesize\ttfamily bool Vector\+Board\+Objects\+::is\+There\+AWall (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Checks if any object in the collection is a wall. 
+
+\begin{DoxyPrecond}{Precondition}
+None. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+The state of the collection remains unchanged. 
+\end{DoxyPostcond}
+\begin{DoxyReturn}{Returns}
+true if a \doxylink{classWall}{Wall} object exists in collection, false otherwise. 
+\end{DoxyReturn}
+\Hypertarget{classVectorBoardObjects_a2c357e9cc68511363f2d67c1ddf9fa57}\label{classVectorBoardObjects_a2c357e9cc68511363f2d67c1ddf9fa57} 
+\index{VectorBoardObjects@{VectorBoardObjects}!removeOnePlayer@{removeOnePlayer}}
+\index{removeOnePlayer@{removeOnePlayer}!VectorBoardObjects@{VectorBoardObjects}}
+\doxysubsubsection{\texorpdfstring{removeOnePlayer()}{removeOnePlayer()}}
+{\footnotesize\ttfamily void Vector\+Board\+Objects\+::remove\+One\+Player (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Removes the \doxylink{classPlayer}{Player} object from the container if present. 
+
+\begin{DoxyPrecond}{Precondition}
+None. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+If a \doxylink{classPlayer}{Player} object existed in collection, it is removed, remaining objects are shifted, and count is decremented by 1. 
+\end{DoxyPostcond}
+\Hypertarget{classVectorBoardObjects_a0764ad1785c4f7256d867dd08bbb2bfd}\label{classVectorBoardObjects_a0764ad1785c4f7256d867dd08bbb2bfd} 
+\index{VectorBoardObjects@{VectorBoardObjects}!theFirst@{theFirst}}
+\index{theFirst@{theFirst}!VectorBoardObjects@{VectorBoardObjects}}
+\doxysubsubsection{\texorpdfstring{theFirst()}{theFirst()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classBoardObject}{p\+\_\+\+Board\+Object}} Vector\+Board\+Objects\+::the\+First (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Retrieves the first object in the collection and resets the internal cursor. 
+
+\begin{DoxyPrecond}{Precondition}
+None. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+If count \texorpdfstring{$>$}{>} 0, returns collection\mbox{[}0\mbox{]} and sets internal\+Cursor to 1. Otherwise returns nullptr. 
+\end{DoxyPostcond}
+\begin{DoxyReturn}{Returns}
+Pointer to the first \doxylink{classBoardObject}{Board\+Object}, or nullptr if the collection is empty. 
+\end{DoxyReturn}
+\Hypertarget{classVectorBoardObjects_a35a5be66b34871014d5a5b5324c4b4d9}\label{classVectorBoardObjects_a35a5be66b34871014d5a5b5324c4b4d9} 
+\index{VectorBoardObjects@{VectorBoardObjects}!theNext@{theNext}}
+\index{theNext@{theNext}!VectorBoardObjects@{VectorBoardObjects}}
+\doxysubsubsection{\texorpdfstring{theNext()}{theNext()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classBoardObject}{p\+\_\+\+Board\+Object}} Vector\+Board\+Objects\+::the\+Next (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Retrieves the next object in the collection based on the internal cursor. 
+
+\begin{DoxyPrecond}{Precondition}
+\doxylink{classVectorBoardObjects_a0764ad1785c4f7256d867dd08bbb2bfd}{the\+First()} should be called prior to iterating, or internal\+Cursor must be within \mbox{[}0, count\mbox{]}. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+If internal\+Cursor \texorpdfstring{$<$}{<} count, returns collection\mbox{[}internal\+Cursor\mbox{]} and increments internal\+Cursor by 1. Otherwise returns nullptr. 
+\end{DoxyPostcond}
+\begin{DoxyReturn}{Returns}
+Pointer to the next \doxylink{classBoardObject}{Board\+Object}, or nullptr if no more objects exist. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{VectorBoardObjects_8h}{Vector\+Board\+Objects.\+h}}\item 
+Vector\+Board\+Objects.\+cpp\end{DoxyCompactItemize}

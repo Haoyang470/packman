@@ -1,0 +1,163 @@
+\doxysection{Bomb Class Reference}
+\hypertarget{classBomb}{}\label{classBomb}\index{Bomb@{Bomb}}
+
+
+Derived class from \doxylink{classBoardObject}{Board\+Object} representing an explosive item.  
+
+
+
+
+{\ttfamily \#include $<$Bomb.\+h$>$}
+
+
+
+Inheritance diagram for Bomb\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=157pt]{classBomb__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Bomb\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=157pt]{classBomb__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classBomb_a6cb8c6fe17ba5d7a7ef9f97510487f38}{Bomb}} (int x, int y, int dmg=10)
+\begin{DoxyCompactList}\small\item\em Constructs a \doxylink{classBomb}{Bomb} object at specified board coordinates. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classBomb_acbb47327cfb2fa429887774ef3597965}{\texorpdfstring{$\sim$}{\string~}\+Bomb}} ()
+\begin{DoxyCompactList}\small\item\em Destructor for \doxylink{classBomb}{Bomb}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classBomb_aff86fdf5cade277375af41e79886f018}{paint}} ()
+\begin{DoxyCompactList}\small\item\em Renders the ASCII representation of the \doxylink{classBomb}{Bomb}. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classBomb_a8d209566c844c18cbe3bdb708afab26a}{get\+Damage}} () const
+\begin{DoxyCompactList}\small\item\em Gets the damage value of the bomb. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classBoardObject}{Board\+Object}}}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Board\+Object} (int start\+\_\+x, int start\+\_\+y)
+\item 
+int {\bfseries get\+\_\+x} ()
+\item 
+int {\bfseries get\+\_\+y} ()
+\item 
+Object\+Types {\bfseries get\+\_\+\+Type} ()
+\item 
+Object\+Colours {\bfseries get\+\_\+\+Color} ()
+\item 
+virtual void {\bfseries touch} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{classBoardObject}{Board\+Object}}}
+\begin{DoxyCompactItemize}
+\item 
+void {\bfseries set\+\_\+color} (Object\+Colours new\+\_\+color)
+\item 
+void {\bfseries set\+\_\+x} (int new\+\_\+x)
+\item 
+void {\bfseries set\+\_\+y} (int new\+\_\+y)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{classBoardObject}{Board\+Object}}}
+\begin{DoxyCompactItemize}
+\item 
+Object\+Types {\bfseries my\+Class}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Derived class from \doxylink{classBoardObject}{Board\+Object} representing an explosive item. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classBomb_a6cb8c6fe17ba5d7a7ef9f97510487f38}\label{classBomb_a6cb8c6fe17ba5d7a7ef9f97510487f38} 
+\index{Bomb@{Bomb}!Bomb@{Bomb}}
+\index{Bomb@{Bomb}!Bomb@{Bomb}}
+\doxysubsubsection{\texorpdfstring{Bomb()}{Bomb()}}
+{\footnotesize\ttfamily Bomb\+::\+Bomb (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y,  }\item[{int}]{dmg = {\ttfamily 10} }\end{DoxyParamCaption})}
+
+
+
+Constructs a \doxylink{classBomb}{Bomb} object at specified board coordinates. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & Initial row index. \\
+\hline
+{\em y} & Initial column index. \\
+\hline
+{\em dmg} & Damage value dealt by the bomb (defaults to 10). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Precondition}
+x \texorpdfstring{$>$}{>}= 0 \&\& y \texorpdfstring{$>$}{>}= 0 \&\& dmg \texorpdfstring{$>$}{>} 0. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+A \doxylink{classBomb}{Bomb} object is created at (x, y) with specified damage. 
+\end{DoxyPostcond}
+\Hypertarget{classBomb_acbb47327cfb2fa429887774ef3597965}\label{classBomb_acbb47327cfb2fa429887774ef3597965} 
+\index{Bomb@{Bomb}!````~Bomb@{\texorpdfstring{$\sim$}{\string~}Bomb}}
+\index{````~Bomb@{\texorpdfstring{$\sim$}{\string~}Bomb}!Bomb@{Bomb}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}Bomb()}{\string~Bomb()}}
+{\footnotesize\ttfamily Bomb\+::\texorpdfstring{$\sim$}{\string~}\+Bomb (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destructor for \doxylink{classBomb}{Bomb}. 
+
+\begin{DoxyPrecond}{Precondition}
+None. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+\doxylink{classBomb}{Bomb} object is safely destroyed. 
+\end{DoxyPostcond}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classBomb_a8d209566c844c18cbe3bdb708afab26a}\label{classBomb_a8d209566c844c18cbe3bdb708afab26a} 
+\index{Bomb@{Bomb}!getDamage@{getDamage}}
+\index{getDamage@{getDamage}!Bomb@{Bomb}}
+\doxysubsubsection{\texorpdfstring{getDamage()}{getDamage()}}
+{\footnotesize\ttfamily int Bomb\+::get\+Damage (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Gets the damage value of the bomb. 
+
+\begin{DoxyPrecond}{Precondition}
+None. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Returns damage value without modifying object state. 
+\end{DoxyPostcond}
+\begin{DoxyReturn}{Returns}
+Integer representing damage. 
+\end{DoxyReturn}
+\Hypertarget{classBomb_aff86fdf5cade277375af41e79886f018}\label{classBomb_aff86fdf5cade277375af41e79886f018} 
+\index{Bomb@{Bomb}!paint@{paint}}
+\index{paint@{paint}!Bomb@{Bomb}}
+\doxysubsubsection{\texorpdfstring{paint()}{paint()}}
+{\footnotesize\ttfamily void Bomb\+::paint (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Renders the ASCII representation of the \doxylink{classBomb}{Bomb}. 
+
+\begin{DoxyPrecond}{Precondition}
+None. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Prints \textquotesingle{}B\textquotesingle{} to stdout representing the bomb. 
+\end{DoxyPostcond}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{Bomb_8h}{Bomb.\+h}}\item 
+Bomb.\+cpp\end{DoxyCompactItemize}
