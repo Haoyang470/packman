@@ -1,0 +1,54 @@
+\doxysection{Board\+Object\+H.\+h}
+\hypertarget{BoardObjectH_8h_source}{}\label{BoardObjectH_8h_source}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ H\_BOARD\_OBJECT}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ H\_BOARD\_OBJECT}}
+\DoxyCodeLine{00003\ \textcolor{keyword}{enum}\ ObjectColours\ \{\ BLACK,\ YELLOW,\ BLUE,\ RED,\ INVISIBLE,\ BACKGROUND\};}
+\DoxyCodeLine{00004\ \textcolor{keyword}{enum}\ ObjectTypes\ \{\ THE\_BACKGROUND,\ A\_COOKIE,\ A\_PLAYER\ ,A\_WALL\};}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classBoardObject}{BoardObject}}}
+\DoxyCodeLine{00008\ \{}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00011\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ x,y;}
+\DoxyCodeLine{00012\ \ \ \ \ \ \ \ \ ObjectColours\ currentColor;}
+\DoxyCodeLine{00013\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00014\ \ \ \ \ ObjectTypes\ myClass;}
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{comment}{//int\ unique\_ID;}}
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{comment}{//static\ int\ count;}}
+\DoxyCodeLine{00017\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classBoardObject}{BoardObject}}\ (\textcolor{keywordtype}{int}\ start\_x,\ \textcolor{keywordtype}{int}\ start\_y)}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{\ x=start\_x;\ y=start\_y;}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ currentColor=BACKGROUND;\ }
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \ \ myClass=THE\_BACKGROUND;}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//unique\_ID=count++;}}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \textcolor{comment}{//int\ get\_ID()\ \{\ return\ unique\_ID;\};}}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ get\_x()\ \{\ \textcolor{keywordflow}{return}\ x;\};}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ get\_y()\ \{\ \textcolor{keywordflow}{return}\ y;\};}
+\DoxyCodeLine{00030\ \ \ \ \ ObjectTypes\ get\_Type()\ \{\textcolor{keywordflow}{return}\ myClass;\}}
+\DoxyCodeLine{00031\ \ \ \ \ }
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ ObjectColours\ get\_Color()\ \{\textcolor{keywordflow}{return}\ currentColor;\ \}}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ touch()\ \{currentColor=BACKGROUND;\ \}}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00037\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{keywordtype}{void}\ set\_color(ObjectColours\ new\_color)}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \{currentColor=new\_color;\};}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ set\_x(\textcolor{keywordtype}{int}\ new\_x)\ \{\ x=new\_x;\};}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ set\_y(\textcolor{keywordtype}{int}\ new\_y)\ \{y=new\_y;\};}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00045\ \};}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00047\ \textcolor{comment}{//int\ BoardObject::count=0;}}
+\DoxyCodeLine{00048\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ H\_BOARD\_OBJECT}}
+\DoxyCodeLine{00049\ }
+
+\end{DoxyCode}

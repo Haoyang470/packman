@@ -1,0 +1,24 @@
+<map id="test_vector.cpp" name="test_vector.cpp">
+<area shape="rect" id="Node000001" title="Unit tests for VectorBoardObjects class verifying Design by Contract (DbC)." alt="" coords="247,5,368,31"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="33,152,113,177"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="247,25,182,31,111,42,50,58,28,69,14,80,8,96,14,112,27,128,45,142,41,146,24,131,9,114,3,96,9,77,25,64,49,53,110,37,181,26,246,20"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="23,79,93,104"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="268,33,107,79,105,74,267,28"/>
+<area shape="rect" id="Node000004" href="$VectorBoardObjects_8h.html" title="Class managing a fixed&#45;capacity collection of BoardObjects for a single board cell." alt="" coords="226,79,389,104"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="310,31,310,65,305,65,305,31"/>
+<area shape="rect" id="Node000006" href="$PlayerH_8h_source.html" title=" " alt="" coords="117,79,202,104"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="285,33,197,75,195,70,283,28"/>
+<area shape="rect" id="Node000007" href="$CookieH_8h_source.html" title=" " alt="" coords="413,79,503,104"/>
+<area shape="poly" id="edge8_Node000001_Node000007" title=" " alt="" coords="333,28,422,70,420,75,331,33"/>
+<area shape="rect" id="Node000008" href="$Monster_8h.html" title="Represents a Monster entity on the game board." alt="" coords="527,79,613,104"/>
+<area shape="poly" id="edge10_Node000001_Node000008" title=" " alt="" coords="350,28,515,72,514,78,349,33"/>
+<area shape="rect" id="Node000009" href="$Bomb_8h.html" title="Represents a Bomb entity on the game board." alt="" coords="638,79,710,104"/>
+<area shape="poly" id="edge12_Node000001_Node000009" title=" " alt="" coords="369,27,625,76,624,81,368,32"/>
+<area shape="rect" id="Node000005" href="$BoardObjectH_8h_source.html" title=" " alt="" coords="396,152,520,177"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="333,102,422,144,420,148,331,106"/>
+<area shape="poly" id="edge6_Node000006_Node000002" title=" " alt="" coords="147,106,99,145,96,141,144,102"/>
+<area shape="poly" id="edge7_Node000006_Node000005" title=" " alt="" coords="203,100,398,146,396,151,202,105"/>
+<area shape="poly" id="edge9_Node000007_Node000005" title=" " alt="" coords="461,104,461,138,455,138,455,104"/>
+<area shape="poly" id="edge11_Node000008_Node000005" title=" " alt="" coords="554,106,490,147,487,142,551,102"/>
+<area shape="poly" id="edge13_Node000009_Node000005" title=" " alt="" coords="640,107,507,150,505,145,639,101"/>
+</map>

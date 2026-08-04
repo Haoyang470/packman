@@ -1,0 +1,47 @@
+\doxysection{Vector\+Board\+Objects.\+h File Reference}
+\hypertarget{VectorBoardObjects_8h}{}\label{VectorBoardObjects_8h}\index{VectorBoardObjects.h@{VectorBoardObjects.h}}
+
+
+Class managing a fixed-\/capacity collection of Board\+Objects for a single board cell.  
+
+
+{\ttfamily \#include "{}Board\+Object\+H.\+h"{}}\newline
+Include dependency graph for Vector\+Board\+Objects.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=202pt]{VectorBoardObjects_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=252pt]{VectorBoardObjects_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classVectorBoardObjects}{Vector\+Board\+Objects}}
+\begin{DoxyCompactList}\small\item\em Manages up to MAX\+\_\+\+OBJECTS \doxylink{classBoardObject}{Board\+Object} pointers. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{VectorBoardObjects_8h_ac13f6667cb79a6ba9ae153d5760d48e3}\label{VectorBoardObjects_8h_ac13f6667cb79a6ba9ae153d5760d48e3} 
+typedef \mbox{\hyperlink{classBoardObject}{Board\+Object}} \texorpdfstring{$\ast$}{*} {\bfseries p\+\_\+\+Board\+Object}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{VectorBoardObjects_8h_ae2e305efb775a7b0ef7a615275ac7fa0}\label{VectorBoardObjects_8h_ae2e305efb775a7b0ef7a615275ac7fa0} 
+const int {\bfseries MAX\+\_\+\+OBJECTS} = 4
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class managing a fixed-\/capacity collection of Board\+Objects for a single board cell. 
+
+Provides an array-\/based or vector-\/like storage mechanism for board entities (e.\+g., Players, Walls, Cookies), replacing the previous linked-\/list implementation while maintaining identical API contracts. 

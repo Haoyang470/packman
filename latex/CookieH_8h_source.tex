@@ -1,0 +1,37 @@
+\doxysection{Cookie\+H.\+h}
+\hypertarget{CookieH_8h_source}{}\label{CookieH_8h_source}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ H\_COOKIE}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ H\_COOKIE}}
+\DoxyCodeLine{00003\ \textcolor{keyword}{enum}\ CookieState\ \{\ VISIBLE,\ EATEN,\ EXPIRED\};}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{keyword}{enum}\ PrizeValueIndex\ \{CHEAP,\ MEDIUM,\ USEFUL,\ DEAR\};}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}BoardObjectH.h"{}}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classCookie}{Cookie}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classBoardObject}{BoardObject}}}
+\DoxyCodeLine{00011\ \{}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00014\ \ \ \ \ CookieState\ status;}
+\DoxyCodeLine{00015\ \ \ \ \ ObjectColours\ color1;}
+\DoxyCodeLine{00016\ \ \ \ \ ObjectColours\ \ color2;}
+\DoxyCodeLine{00017\ \ \ \ \ PrizeValueIndex\ valueIndex;}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00020\ \ \ \ \ \mbox{\hyperlink{classCookie}{Cookie}}\ (\textcolor{keywordtype}{int}\ start\_x,\ \textcolor{keywordtype}{int}\ start\_y):\mbox{\hyperlink{classBoardObject}{BoardObject}}(start\_x,start\_y)}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \{\ status=VISIBLE;}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \ \ color1\ =\ YELLOW;}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \ \ color2\ \ =\ BLUE;}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \ \ valueIndex=CHEAP;}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ myClass=A\_COOKIE;}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keywordtype}{int}\ get\_value();}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keywordtype}{void}\ touch\ ();}
+\DoxyCodeLine{00031\ \};}
+\DoxyCodeLine{00032\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

@@ -1,0 +1,94 @@
+\doxysection{Board\+H.\+h}
+\hypertarget{BoardH_8h_source}{}\label{BoardH_8h_source}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#define\ ROWS\ 20}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#define\ COLUMNS\ 20}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ \ "{}BoardObjectH.h"{}}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{VectorBoardObjects_8h}{VectorBoardObjects.h}}"{}}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ \ "{}PlayerH.h"{}}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ \ "{}WallH.h"{}}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ \ "{}CookieH.h"{}}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{Monster_8h}{Monster.h}}"{}}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{Bomb_8h}{Bomb.h}}"{}}}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \textcolor{keyword}{typedef}\ \ \mbox{\hyperlink{classVectorBoardObjects}{VectorBoardObjects}}*\ \mbox{\hyperlink{classVectorBoardObjects}{p\_VectorBoardObjects}};}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classBoard}{Board}}}
+\DoxyCodeLine{00018\ \{}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keywordtype}{int}\ the\_rows,\ the\_cols;}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keywordtype}{bool}\ setOK;}
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keywordtype}{bool}\ gameOn;}
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keywordtype}{int}\ lives;}
+\DoxyCodeLine{00027\ \ \ \ \ \mbox{\hyperlink{classVectorBoardObjects}{p\_VectorBoardObjects}}\ \ \ mySpace[ROWS][COLUMNS];}
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keywordtype}{int}\ player\_id\_x;}
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keywordtype}{int}\ player\_id\_y;}
+\DoxyCodeLine{00030\ \ \ \ \ \mbox{\hyperlink{classPlayer}{Player}}\ *startPlayer;}
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keywordtype}{int}\ currentScore;}
+\DoxyCodeLine{00032\ \ \ \ \ }
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ \ \ \ \ \mbox{\hyperlink{classBoard}{Board}}\ (\textcolor{keywordtype}{int}\ rows,\ \textcolor{keywordtype}{int}\ cols)}
+\DoxyCodeLine{00037\ \ \ \ \ \{}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ ((ROWS\ >=\ rows\ )\ \&\&\ (COLUMNS\ >=\ cols))\ }
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \{\ setOK-\/\textcolor{keyword}{true};\ the\_rows=rows;\ the\_cols=cols;}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ lives=3000000;\ gameOn=\textcolor{keyword}{true};}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i=0;\ \ i<rows;\ i++)}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ j=0;\ \ j<cols;\ j++)}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classBoardObject}{BoardObject}}*\ aBackground\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classBoardObject}{BoardObject}}(i,j);}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classVectorBoardObjects}{p\_VectorBoardObjects}}\ aList\ =\textcolor{keyword}{new}\ \mbox{\hyperlink{classVectorBoardObjects}{VectorBoardObjects}}(aBackground);}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ mySpace[i][j]=aList;}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \ \ \ \ player\_id\_x\ =the\_rows/2;}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \ \ \ \ player\_id\_y\ =the\_cols/2;}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \ \ \ \ startPlayer\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classPlayer}{Player}}(player\_id\_x,player\_id\_y);}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \ \ \ \ currentScore\ =0;}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (mySpace[player\_id\_x][player\_id\_y])-\/>addOne(startPlayer);}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i=1;\ i<the\_rows-\/1;\ i++)}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{\ \mbox{\hyperlink{classWall}{Wall}}\ *\ aWall\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classWall}{Wall}}\ (i,1);}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (mySpace[i][1])-\/>addOne(aWall);}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ aWall\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classWall}{Wall}}\ (i,the\_cols-\/2);}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (mySpace[i][the\_cols-\/2])-\/>addOne(aWall);}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i=1;\ i<the\_rows-\/1;\ i=i+2)}
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{\ \mbox{\hyperlink{classCookie}{Cookie}}\ *\ aCookie\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classCookie}{Cookie}}\ (i,0);}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (mySpace[i][0])-\/>addOne(aCookie);}
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ aCookie\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classCookie}{Cookie}}\ (i,the\_cols-\/1);}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (mySpace[i][the\_cols-\/1])-\/>addOne(aCookie);}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00068\ }
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classMonster}{Monster}}\ *aMonster\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classMonster}{Monster}}(3,\ 3);}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (mySpace[3][3])-\/>addOne(aMonster);}
+\DoxyCodeLine{00071\ }
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classBomb}{Bomb}}\ *aBomb\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classBomb}{Bomb}}(5,\ 5);}
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (mySpace[5][5])-\/>addOne(aBomb);}
+\DoxyCodeLine{00074\ }
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ setOK=\textcolor{keyword}{false};}
+\DoxyCodeLine{00078\ }
+\DoxyCodeLine{00079\ \ \ \ \ \};}
+\DoxyCodeLine{00080\ }
+\DoxyCodeLine{00081\ \ \ \ \ \textcolor{keywordtype}{bool}\ setBoardOK\ ()\ \{\textcolor{keywordflow}{return}\ setOK;\};}
+\DoxyCodeLine{00082\ }
+\DoxyCodeLine{00083\ \ \ \ \ \textcolor{keywordtype}{void}\ paint();}
+\DoxyCodeLine{00084\ }
+\DoxyCodeLine{00085\ \ \ \ \ \textcolor{keywordtype}{void}\ move(\textcolor{keywordtype}{char}\ command);}
+\DoxyCodeLine{00086\ }
+\DoxyCodeLine{00087\ \ \ \ \ \textcolor{keywordtype}{bool}\ IamAlive()\ \{\textcolor{keywordflow}{if}\ (0<lives)\ \{\ lives-\/-\/;\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};\}}
+\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};\}}
+\DoxyCodeLine{00089\ \};}
+
+\end{DoxyCode}

@@ -1,0 +1,161 @@
+\doxysection{Monster Class Reference}
+\hypertarget{classMonster}{}\label{classMonster}\index{Monster@{Monster}}
+
+
+Derived class from \doxylink{classBoardObject}{Board\+Object} representing an active hazard/enemy.  
+
+
+
+
+{\ttfamily \#include $<$Monster.\+h$>$}
+
+
+
+Inheritance diagram for Monster\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=157pt]{classMonster__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Monster\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=157pt]{classMonster__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classMonster_a1b7d0b0fcafa123b56537362c40b8a29}{Monster}} (int x, int y)
+\begin{DoxyCompactList}\small\item\em Constructs a \doxylink{classMonster}{Monster} object at specified board coordinates. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classMonster_a21619ba1759b910cd2fd50d858aab338}{\texorpdfstring{$\sim$}{\string~}\+Monster}} ()
+\begin{DoxyCompactList}\small\item\em Destructor for \doxylink{classMonster}{Monster}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classMonster_a064d530a12c97338e385abb87a39353f}{paint}} ()
+\begin{DoxyCompactList}\small\item\em Renders the ASCII representation of the \doxylink{classMonster}{Monster}. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classMonster_a7f2dacc9fdbb4e47a23476e52a9c28c7}{is\+Active}} () const
+\begin{DoxyCompactList}\small\item\em Checks if the monster is currently active. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classBoardObject}{Board\+Object}}}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Board\+Object} (int start\+\_\+x, int start\+\_\+y)
+\item 
+int {\bfseries get\+\_\+x} ()
+\item 
+int {\bfseries get\+\_\+y} ()
+\item 
+Object\+Types {\bfseries get\+\_\+\+Type} ()
+\item 
+Object\+Colours {\bfseries get\+\_\+\+Color} ()
+\item 
+virtual void {\bfseries touch} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{classBoardObject}{Board\+Object}}}
+\begin{DoxyCompactItemize}
+\item 
+void {\bfseries set\+\_\+color} (Object\+Colours new\+\_\+color)
+\item 
+void {\bfseries set\+\_\+x} (int new\+\_\+x)
+\item 
+void {\bfseries set\+\_\+y} (int new\+\_\+y)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{classBoardObject}{Board\+Object}}}
+\begin{DoxyCompactItemize}
+\item 
+Object\+Types {\bfseries my\+Class}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Derived class from \doxylink{classBoardObject}{Board\+Object} representing an active hazard/enemy. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classMonster_a1b7d0b0fcafa123b56537362c40b8a29}\label{classMonster_a1b7d0b0fcafa123b56537362c40b8a29} 
+\index{Monster@{Monster}!Monster@{Monster}}
+\index{Monster@{Monster}!Monster@{Monster}}
+\doxysubsubsection{\texorpdfstring{Monster()}{Monster()}}
+{\footnotesize\ttfamily Monster\+::\+Monster (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})}
+
+
+
+Constructs a \doxylink{classMonster}{Monster} object at specified board coordinates. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & Initial row index. \\
+\hline
+{\em y} & Initial column index. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Precondition}
+x \texorpdfstring{$>$}{>}= 0 \&\& y \texorpdfstring{$>$}{>}= 0. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+A \doxylink{classMonster}{Monster} object is created at (x, y) with active set to true. 
+\end{DoxyPostcond}
+\Hypertarget{classMonster_a21619ba1759b910cd2fd50d858aab338}\label{classMonster_a21619ba1759b910cd2fd50d858aab338} 
+\index{Monster@{Monster}!````~Monster@{\texorpdfstring{$\sim$}{\string~}Monster}}
+\index{````~Monster@{\texorpdfstring{$\sim$}{\string~}Monster}!Monster@{Monster}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}Monster()}{\string~Monster()}}
+{\footnotesize\ttfamily Monster\+::\texorpdfstring{$\sim$}{\string~}\+Monster (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destructor for \doxylink{classMonster}{Monster}. 
+
+\begin{DoxyPrecond}{Precondition}
+None. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+\doxylink{classMonster}{Monster} object is safely destroyed. 
+\end{DoxyPostcond}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classMonster_a7f2dacc9fdbb4e47a23476e52a9c28c7}\label{classMonster_a7f2dacc9fdbb4e47a23476e52a9c28c7} 
+\index{Monster@{Monster}!isActive@{isActive}}
+\index{isActive@{isActive}!Monster@{Monster}}
+\doxysubsubsection{\texorpdfstring{isActive()}{isActive()}}
+{\footnotesize\ttfamily bool Monster\+::is\+Active (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Checks if the monster is currently active. 
+
+\begin{DoxyPrecond}{Precondition}
+None. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Returns the active state without modifying it. 
+\end{DoxyPostcond}
+\begin{DoxyReturn}{Returns}
+true if active, false otherwise. 
+\end{DoxyReturn}
+\Hypertarget{classMonster_a064d530a12c97338e385abb87a39353f}\label{classMonster_a064d530a12c97338e385abb87a39353f} 
+\index{Monster@{Monster}!paint@{paint}}
+\index{paint@{paint}!Monster@{Monster}}
+\doxysubsubsection{\texorpdfstring{paint()}{paint()}}
+{\footnotesize\ttfamily void Monster\+::paint (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Renders the ASCII representation of the \doxylink{classMonster}{Monster}. 
+
+\begin{DoxyPrecond}{Precondition}
+None. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Prints \textquotesingle{}M\textquotesingle{} to stdout representing the monster. 
+\end{DoxyPostcond}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{Monster_8h}{Monster.\+h}}\item 
+Monster.\+cpp\end{DoxyCompactItemize}
